@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres d'emploi EmploiDakar</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Offres d'emploi sur EmploiDakar.com</h1>
+        <ul class="job-list">
+        {% for emploi in page_obj %}
+            <li class="job-item">
+                <h2 class="job-title"><a href="{% url 'emploi_dakar_detail' emploi.id %}">{{ emploi.titre }}</a></h2>
+                <p class="job-company">{{ emploi.entreprise }}</p>
+                <p class="job-location">{{ emploi.localisation }}</p>
+                <p class="job-date">Publié le {{ emploi.date_publication|date:"d/m/Y" }}</p>
+            </li>
+        {% empty %}
+            <li>Aucune offre d'emploi trouvée.</li>
+        {% endfor %}
+        </ul>
+        
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; Première</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Précédente</a>
+                {% endif %}
+
+                <span class="current-page">
+                    Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Suivante</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Dernière &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+        
+        <a href="{% url 'home' %}" class="back-link">Retour à l'accueil</a>
+    </div>
+</body>
+</html> 

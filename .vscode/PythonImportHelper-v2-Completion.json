@@ -1,0 +1,943 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "crontab",
+        "importPath": "celery.schedules",
+        "description": "celery.schedules",
+        "isExtraImport": true,
+        "detail": "celery.schedules",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "scrap_emploi",
+        "description": "scrap_emploi",
+        "isExtraImport": true,
+        "detail": "scrap_emploi",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "env.Scripts.jp",
+        "description": "env.Scripts.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "env.Scripts.jp",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "projet.projet.asgi",
+        "description": "projet.projet.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "projet.projet.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "projet.projet.celery",
+        "description": "projet.projet.celery",
+        "peekOfCode": "app = Celery('projet')\n# Configure Celery using Django settings\napp.config_from_object('django.conf:settings', namespace='CELERY')\n# Load tasks from all registered Django app configs\napp.autodiscover_tasks()\n# Configure periodic tasks\napp.conf.beat_schedule = {\n    'scrape-emploidakar-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploidakar_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds",
+        "detail": "projet.projet.celery",
+        "documentation": {}
+    },
+    {
+        "label": "app.conf.beat_schedule",
+        "kind": 5,
+        "importPath": "projet.projet.celery",
+        "description": "projet.projet.celery",
+        "peekOfCode": "app.conf.beat_schedule = {\n    'scrape-emploidakar-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploidakar_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n    'scrape-emploisenegal-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploisenegal_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n}",
+        "detail": "projet.projet.celery",
+        "documentation": {}
+    },
+    {
+        "label": "DebugRedirectMiddleware",
+        "kind": 6,
+        "importPath": "projet.projet.middleware",
+        "description": "projet.projet.middleware",
+        "peekOfCode": "class DebugRedirectMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        # Log détaillé de chaque requête\n        logger.debug(f\"[MIDDLEWARE] Requête reçue : {request.method} {request.path}\")\n        logger.debug(f\"[MIDDLEWARE] Paramètres GET : {request.GET}\")\n        logger.debug(f\"[MIDDLEWARE] En-têtes : {dict(request.headers)}\")\n        response = self.get_response(request)\n        # Log de la réponse",
+        "detail": "projet.projet.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.projet.middleware",
+        "description": "projet.projet.middleware",
+        "peekOfCode": "logger = logging.getLogger('scrap_emploi')\nclass DebugRedirectMiddleware:\n    def __init__(self, get_response):\n        self.get_response = get_response\n    def __call__(self, request):\n        # Log détaillé de chaque requête\n        logger.debug(f\"[MIDDLEWARE] Requête reçue : {request.method} {request.path}\")\n        logger.debug(f\"[MIDDLEWARE] Paramètres GET : {request.GET}\")\n        logger.debug(f\"[MIDDLEWARE] En-têtes : {dict(request.headers)}\")\n        response = self.get_response(request)",
+        "detail": "projet.projet.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-e3k&)*+4!3%a9v7ibbdlawx4=^&ufv-zzpjvw1xjmzfzormxaw'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-e3k&)*+4!3%a9v7ibbdlawx4=^&ufv-zzpjvw1xjmzfzormxaw'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'scrap_emploi',",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'scrap_emploi',\n    'django_celery_beat',\n]",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'projet.urls'",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "ROOT_URLCONF = 'projet.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'projet.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n       'default': {\n           'ENGINE': 'django.db.backends.mysql',\n           'NAME': 'work_flexer',\n           'USER': 'root',\n           'PASSWORD': '',\n           'HOST': 'localhost',  # ou l'adresse IP de votre serveur MySQL",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "DATABASES = {\n       'default': {\n           'ENGINE': 'django.db.backends.mysql',\n           'NAME': 'work_flexer',\n           'USER': 'root',\n           'PASSWORD': '',\n           'HOST': 'localhost',  # ou l'adresse IP de votre serveur MySQL\n           'PORT': '3306',       # port par défaut de MySQL\n       }\n   }",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]\n# Default primary key field type",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'scrap_emploi/static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',\n            'style': '{',\n        },\n    },",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "LOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',\n            'style': '{',\n        },\n    },\n    'handlers': {",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_URL",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'\nCELERY_RESULT_BACKEND = 'rpc://'\nCELERY_ACCEPT_CONTENT = ['json']\nCELERY_TASK_SERIALIZER = 'json'\nCELERY_RESULT_SERIALIZER = 'json'\nCELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_BACKEND",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_RESULT_BACKEND = 'rpc://'\nCELERY_ACCEPT_CONTENT = ['json']\nCELERY_TASK_SERIALIZER = 'json'\nCELERY_RESULT_SERIALIZER = 'json'\nCELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_ACCEPT_CONTENT",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_ACCEPT_CONTENT = ['json']\nCELERY_TASK_SERIALIZER = 'json'\nCELERY_RESULT_SERIALIZER = 'json'\nCELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_SERIALIZER",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_TASK_SERIALIZER = 'json'\nCELERY_RESULT_SERIALIZER = 'json'\nCELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_SERIALIZER",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_RESULT_SERIALIZER = 'json'\nCELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TIMEZONE",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_TIMEZONE = 'UTC'\nCELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP",
+        "kind": 5,
+        "importPath": "projet.projet.settings",
+        "description": "projet.projet.settings",
+        "peekOfCode": "CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True",
+        "detail": "projet.projet.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "projet.projet.urls",
+        "description": "projet.projet.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', views.home, name='home'),\n    path('emplois-senegal/', views.emplois_senegal_list, name='emplois_senegal_list'),\n    path('emplois-senegal/<int:emploi_id>/', views.emploi_senegal_detail, name='emploi_senegal_detail'),\n    path('emplois-dakar/', views.emplois_dakar_list, name='emplois_dakar_list'),\n    path('emplois-dakar/<int:emploi_id>/', views.emploi_dakar_detail, name='emploi_dakar_detail'),\n    path('senjob/', views.senjob_list, name='senjob_list'),\n    path('senjob/<int:offre_id>/', views.senjob_detail, name='senjob_detail'),\n]",
+        "detail": "projet.projet.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "projet.projet.wsgi",
+        "description": "projet.projet.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "projet.projet.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_emplois_dakar",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.controllers.emploidakarController",
+        "description": "projet.scrap_emploi.controllers.emploidakarController",
+        "peekOfCode": "def scrape_emplois_dakar():\n    # Headers pour simuler un navigateur réel\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',\n        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',\n        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',\n        'Connection': 'keep-alive',\n        'Upgrade-Insecure-Requests': '1',\n    }\n    # URL de l'API AJAX de WP Job Manager",
+        "detail": "projet.scrap_emploi.controllers.emploidakarController",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.controllers.emploidakarController",
+        "description": "projet.scrap_emploi.controllers.emploidakarController",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef scrape_emplois_dakar():\n    # Headers pour simuler un navigateur réel\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',\n        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',\n        'Accept-Language': 'fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3',\n        'Connection': 'keep-alive',\n        'Upgrade-Insecure-Requests': '1',\n    }",
+        "detail": "projet.scrap_emploi.controllers.emploidakarController",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_emplois",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.controllers.emploisenegalController",
+        "description": "projet.scrap_emploi.controllers.emploisenegalController",
+        "peekOfCode": "def scrape_emplois():\n    logger.info(\"Début du scraping EmploiSenegal\")\n    # Récupérer les offres existantes pour éviter les doublons\n    existing_links = set(EmploiSenegal.objects.values_list('lien_offre', flat=True))\n    existing_titles = set(EmploiSenegal.objects.values_list('titre', flat=True))\n    logger.info(f\"Nombre d'offres déjà en base: {len(existing_links)}\")\n    base_url = \"https://www.emploisenegal.com/recherche-jobs-senegal\"\n    page = 0\n    new_offers_count = 0\n    existing_offers_count = 0",
+        "detail": "projet.scrap_emploi.controllers.emploisenegalController",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_emplois_new",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.controllers.emploisenegalController",
+        "description": "projet.scrap_emploi.controllers.emploisenegalController",
+        "peekOfCode": "def scrape_emplois_new():\n    # Cette fonction n'est plus utilisée mais conservée pour référence\n    url = \"https://emploisenegal.com/recherche-jobs-senegal\"\n    response = requests.get(url)\n    soup = BeautifulSoup(response.content, 'html.parser')\n    emplois = []\n    articles = soup.find_all('article', class_='js_result_row')\n    for article in articles:\n        titre = article.find('h2', class_='js_result_title').text.strip()\n        lien_offre = article.find('a', class_='js_result_link')['href']",
+        "detail": "projet.scrap_emploi.controllers.emploisenegalController",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.controllers.emploisenegalController",
+        "description": "projet.scrap_emploi.controllers.emploisenegalController",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nUSER_AGENTS = [\n    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',\n    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',\n    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',\n    'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',\n    'Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36'\n]\ndef scrape_emplois():\n    logger.info(\"Début du scraping EmploiSenegal\")",
+        "detail": "projet.scrap_emploi.controllers.emploisenegalController",
+        "documentation": {}
+    },
+    {
+        "label": "USER_AGENTS",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.controllers.emploisenegalController",
+        "description": "projet.scrap_emploi.controllers.emploisenegalController",
+        "peekOfCode": "USER_AGENTS = [\n    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',\n    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',\n    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',\n    'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',\n    'Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36'\n]\ndef scrape_emplois():\n    logger.info(\"Début du scraping EmploiSenegal\")\n    # Récupérer les offres existantes pour éviter les doublons",
+        "detail": "projet.scrap_emploi.controllers.emploisenegalController",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_senjob",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.controllers.senjobController",
+        "description": "projet.scrap_emploi.controllers.senjobController",
+        "peekOfCode": "def scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    total_offres = 0\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'\n    }\n    page_number = 1\n    has_next_page = True\n    while has_next_page:\n        try:",
+        "detail": "projet.scrap_emploi.controllers.senjobController",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.controllers.senjobController",
+        "description": "projet.scrap_emploi.controllers.senjobController",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    total_offres = 0\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'\n    }\n    page_number = 1\n    has_next_page = True\n    while has_next_page:",
+        "detail": "projet.scrap_emploi.controllers.senjobController",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.migrations.0001_initial",
+        "description": "projet.scrap_emploi.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='EmploiDakar',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('titre', models.CharField(max_length=200)),",
+        "detail": "projet.scrap_emploi.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
+        "description": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('scrap_emploi', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='emploidakar',\n            name='competences',\n        ),\n        migrations.RemoveField(",
+        "detail": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.migrations.0003_senjobmodel",
+        "description": "projet.scrap_emploi.migrations.0003_senjobmodel",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('scrap_emploi', '0002_remove_emploidakar_competences_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='SenjobModel',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('titre', models.CharField(max_length=255)),",
+        "detail": "projet.scrap_emploi.migrations.0003_senjobmodel",
+        "documentation": {}
+    },
+    {
+        "label": "EmploiDakar",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.models.emploidakarModel",
+        "description": "projet.scrap_emploi.models.emploidakarModel",
+        "peekOfCode": "class EmploiDakar(models.Model):\n    titre = models.CharField(max_length=200)\n    description_poste = models.TextField(null=True, blank=True)\n    profil_recherche = models.TextField(null=True, blank=True)\n    entreprise = models.CharField(max_length=200)\n    localisation = models.CharField(max_length=200)\n    type_contrat = models.CharField(max_length=50)\n    date_publication = models.DateTimeField(null=True, blank=True)\n    lien_offre = models.URLField(max_length=255)\n    reference = models.CharField(max_length=100, unique=True, null=True, blank=True)",
+        "detail": "projet.scrap_emploi.models.emploidakarModel",
+        "documentation": {}
+    },
+    {
+        "label": "EmploiSenegal",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.models.emploisenegalModel",
+        "description": "projet.scrap_emploi.models.emploisenegalModel",
+        "peekOfCode": "class EmploiSenegal(models.Model):\n    titre = models.CharField(max_length=200)\n    description_poste = models.TextField()\n    profil_recherche = models.TextField(default='')\n    entreprise = models.CharField(max_length=100)\n    localisation = models.CharField(max_length=100)\n    lien_offre = models.URLField()\n    source = models.CharField(max_length=100, default='emploisenegal.com')\n    date_publication = models.DateField()\n    date_creation = models.DateTimeField(auto_now_add=True)",
+        "detail": "projet.scrap_emploi.models.emploisenegalModel",
+        "documentation": {}
+    },
+    {
+        "label": "SenjobModel",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.models.senjobModel",
+        "description": "projet.scrap_emploi.models.senjobModel",
+        "peekOfCode": "class SenjobModel(models.Model):\n    titre = models.CharField(max_length=255)\n    entreprise = models.CharField(max_length=255, null=True, blank=True)\n    localisation = models.CharField(max_length=100)\n    type_contrat = models.CharField(max_length=100, null=True, blank=True)\n    date_publication = models.DateField()\n    date_expiration = models.DateField()\n    lien_offre = models.URLField(max_length=500)\n    description_poste = models.TextField(null=True, blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "detail": "projet.scrap_emploi.models.senjobModel",
+        "documentation": {}
+    },
+    {
+        "label": "ScrapEmploiConfig",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.apps",
+        "description": "projet.scrap_emploi.apps",
+        "peekOfCode": "class ScrapEmploiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'scrap_emploi'",
+        "detail": "projet.scrap_emploi.apps",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_emploidakar_periodic",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.tasks",
+        "description": "projet.scrap_emploi.tasks",
+        "peekOfCode": "def scrape_emploidakar_periodic():\n    \"\"\"\n    Tâche périodique pour scraper les offres d'EmploiDakar\n    \"\"\"\n    try:\n        logger.info(\"Démarrage du scraping périodique EmploiDakar\")\n        new_offers = scrape_emplois_dakar()\n        logger.info(f\"Scraping EmploiDakar terminé. {new_offers} nouvelles offres ajoutées.\")\n        return new_offers\n    except Exception as e:",
+        "detail": "projet.scrap_emploi.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_emploisenegal_periodic",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.tasks",
+        "description": "projet.scrap_emploi.tasks",
+        "peekOfCode": "def scrape_emploisenegal_periodic():\n    \"\"\"\n    Tâche périodique pour scraper les offres d'EmploiSenegal\n    \"\"\"\n    try:\n        logger.info(\"Démarrage du scraping périodique EmploiSenegal\")\n        new_offers = scrape_emplois()\n        logger.info(f\"Scraping EmploiSenegal terminé. {new_offers} nouvelles offres ajoutées.\")\n        return new_offers\n    except Exception as e:",
+        "detail": "projet.scrap_emploi.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.tasks",
+        "description": "projet.scrap_emploi.tasks",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@shared_task\ndef scrape_emploidakar_periodic():\n    \"\"\"\n    Tâche périodique pour scraper les offres d'EmploiDakar\n    \"\"\"\n    try:\n        logger.info(\"Démarrage du scraping périodique EmploiDakar\")\n        new_offers = scrape_emplois_dakar()\n        logger.info(f\"Scraping EmploiDakar terminé. {new_offers} nouvelles offres ajoutées.\")",
+        "detail": "projet.scrap_emploi.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'scrap_emploi/home.html')\ndef emplois_senegal_list(request):\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "emplois_senegal_list",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def emplois_senegal_list(request):\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }\n    return render(request, 'scrap_emploi/emplois_senegal_list.html', context)\ndef emploi_senegal_detail(request, emploi_id):",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "emploi_senegal_detail",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def emploi_senegal_detail(request, emploi_id):\n    emploi = get_object_or_404(EmploiSenegal, id=emploi_id)\n    context = {\n        'emploi': emploi\n    }\n    return render(request, 'scrap_emploi/emploi_senegal_detail.html', context)\ndef emplois_dakar_list(request):\n    scrape_emplois_dakar()\n    emplois_dakar = EmploiDakar.objects.all()\n    paginator = Paginator(emplois_dakar, 20)  # 20 éléments par page",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "emplois_dakar_list",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def emplois_dakar_list(request):\n    scrape_emplois_dakar()\n    emplois_dakar = EmploiDakar.objects.all()\n    paginator = Paginator(emplois_dakar, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }\n    return render(request, 'scrap_emploi/emplois_dakar_list.html', context)",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "emploi_dakar_detail",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def emploi_dakar_detail(request, emploi_id):\n    emploi = get_object_or_404(EmploiDakar, id=emploi_id)\n    context = {\n        'emploi': emploi\n    }\n    return render(request, 'scrap_emploi/emploi_dakar_detail.html', context)\ndef senjob_list(request):\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "senjob_list",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def senjob_list(request):\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')\n    offres = paginator.get_page(page)\n    return render(request, 'scrap_emploi/senjob_list.html', {'offres': offres})\ndef senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "senjob_detail",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "projet.manage",
+        "description": "projet.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projet.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "projet.manage",
+        "documentation": {}
+    }
+]

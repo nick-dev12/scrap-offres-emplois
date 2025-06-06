@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres d'emploi Senjob</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Offres d'emploi Senjob</h1>
+        
+        <div class="grid">
+            {% for offre in offres %}
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{{ offre.titre }}</h2>
+                    <h3 class="card-subtitle">{{ offre.entreprise }}</h3>
+                    
+                    <div class="badges">
+                        <span class="badge badge-primary">{{ offre.localisation }}</span>
+                        <span class="badge badge-secondary">{{ offre.type_contrat }}</span>
+                    </div>
+                    
+                    
+                    <div class="dates">
+                        <p><i class="fas fa-calendar-alt"></i> Publication: {{ offre.date_publication|date:"d/m/Y" }}</p>
+                        <p><i class="fas fa-clock"></i> Expiration: {{ offre.date_expiration|date:"d/m/Y" }}</p>
+                    </div>
+                    
+                    <a href="{% url 'senjob_detail' offre.id %}" class="btn btn-primary" target="_blank">
+                        Voir l'offre
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Aucune offre d'emploi disponible pour le moment.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if offres.has_other_pages %}
+        <div class="pagination">
+            {% if offres.has_previous %}
+            <a href="?page={{ offres.previous_page_number }}" class="page-link">Précédent</a>
+            {% endif %}
+
+            {% for num in offres.paginator.page_range %}
+            {% if offres.number == num %}
+            <a href="?page={{ num }}" class="page-link active">{{ num }}</a>
+            {% else %}
+            <a href="?page={{ num }}" class="page-link">{{ num }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if offres.has_next %}
+            <a href="?page={{ offres.next_page_number }}" class="page-link">Suivant</a>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="back-link">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
