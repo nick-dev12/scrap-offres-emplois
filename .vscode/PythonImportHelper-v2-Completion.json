@@ -183,6 +183,22 @@
         "documentation": {}
     },
     {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
         "label": "timezone",
         "importPath": "django.utils",
         "description": "django.utils",
@@ -208,6 +224,14 @@
     },
     {
         "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -297,6 +321,23 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "transaction",
         "importPath": "django.db",
         "description": "django.db",
@@ -321,22 +362,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -374,6 +399,14 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
         "documentation": {}
     },
     {
@@ -432,7 +465,7 @@
         "kind": 5,
         "importPath": "projet.projet.celery",
         "description": "projet.projet.celery",
-        "peekOfCode": "app.conf.beat_schedule = {\n    'scrape-emploidakar-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploidakar_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n    'scrape-emploisenegal-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploisenegal_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n}",
+        "peekOfCode": "app.conf.beat_schedule = {\n    'scrape-emploidakar-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploidakar_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n    'scrape-emploisenegal-every-30-minutes': {\n        'task': 'scrap_emploi.tasks.scrape_emploisenegal_periodic',\n        'schedule': 30 * 60,  # 30 minutes in seconds\n    },\n    'scrape-senjob-every-30-minutes': {",
         "detail": "projet.projet.celery",
         "documentation": {}
     },
@@ -693,7 +726,7 @@
         "kind": 5,
         "importPath": "projet.projet.urls",
         "description": "projet.projet.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', views.home, name='home'),\n    path('emplois-senegal/', views.emplois_senegal_list, name='emplois_senegal_list'),\n    path('emplois-senegal/<int:emploi_id>/', views.emploi_senegal_detail, name='emploi_senegal_detail'),\n    path('emplois-dakar/', views.emplois_dakar_list, name='emplois_dakar_list'),\n    path('emplois-dakar/<int:emploi_id>/', views.emploi_dakar_detail, name='emploi_dakar_detail'),\n    path('senjob/', views.senjob_list, name='senjob_list'),\n    path('senjob/<int:offre_id>/', views.senjob_detail, name='senjob_detail'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', views.home, name='home'),\n    path('emplois-senegal/', views.emplois_senegal_list, name='emplois_senegal_list'),\n    path('emplois-senegal/<int:emploi_id>/', views.emploi_senegal_detail, name='emploi_senegal_detail'),\n    path('emplois-dakar/', views.emplois_dakar_list, name='emplois_dakar_list'),\n    path('emplois-dakar/<int:emploi_id>/', views.emploi_dakar_detail, name='emploi_dakar_detail'),\n    path('senjob/', views.senjob_list, name='senjob_list'),\n    path('senjob/<int:offre_id>/', views.senjob_detail, name='senjob_detail'),\n    path('offre-emploi-sn/', views.offre_emploi_sn_list, name='offre_emploi_sn_list'),",
         "detail": "projet.projet.urls",
         "documentation": {}
     },
@@ -761,11 +794,29 @@
         "documentation": {}
     },
     {
+        "label": "scrape_offre_emploi_sn",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "description": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "peekOfCode": "def scrape_offre_emploi_sn():\n    \"\"\"\n    Fonction principale pour scraper les offres d'emploi du site offre-emploi.sn\n    \"\"\"\n    logger.info(\"Démarrage du scraping OffreEmploiSN\")\n    # Récupérer les offres existantes pour éviter les doublons\n    existing_links = set(OffreEmploiSN.objects.values_list('lien_offre', flat=True))\n    existing_titles = set(OffreEmploiSN.objects.values_list('titre', flat=True))\n    logger.info(f\"Nombre d'offres déjà en base: {len(existing_links)}\")\n    base_url = \"https://offre-emploi.sn/offre-emploi-au-senegal/\"",
+        "detail": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "description": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef scrape_offre_emploi_sn():\n    \"\"\"\n    Fonction principale pour scraper les offres d'emploi du site offre-emploi.sn\n    \"\"\"\n    logger.info(\"Démarrage du scraping OffreEmploiSN\")\n    # Récupérer les offres existantes pour éviter les doublons\n    existing_links = set(OffreEmploiSN.objects.values_list('lien_offre', flat=True))\n    existing_titles = set(OffreEmploiSN.objects.values_list('titre', flat=True))\n    logger.info(f\"Nombre d'offres déjà en base: {len(existing_links)}\")",
+        "detail": "projet.scrap_emploi.controllers.offreEmploiSNController",
+        "documentation": {}
+    },
+    {
         "label": "scrape_senjob",
         "kind": 2,
         "importPath": "projet.scrap_emploi.controllers.senjobController",
         "description": "projet.scrap_emploi.controllers.senjobController",
-        "peekOfCode": "def scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    total_offres = 0\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'\n    }\n    page_number = 1\n    has_next_page = True\n    while has_next_page:\n        try:",
+        "peekOfCode": "def scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    # Récupérer tous les liens et titres d'offres existants une seule fois au début\n    existing_links = set(SenjobModel.objects.values_list('lien_offre', flat=True))\n    existing_titles = set(SenjobModel.objects.values_list('titre', flat=True))\n    logger.info(f\"Nombre d'offres déjà en base: {len(existing_links)}\")\n    total_offres = 0\n    existing_offres_count = 0\n    consecutive_existing_offres = 0\n    max_consecutive_existing = 15  # Arrêter après 15 offres consécutives déjà existantes",
         "detail": "projet.scrap_emploi.controllers.senjobController",
         "documentation": {}
     },
@@ -774,7 +825,7 @@
         "kind": 5,
         "importPath": "projet.scrap_emploi.controllers.senjobController",
         "description": "projet.scrap_emploi.controllers.senjobController",
-        "peekOfCode": "logger = logging.getLogger(__name__)\ndef scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    total_offres = 0\n    headers = {\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'\n    }\n    page_number = 1\n    has_next_page = True\n    while has_next_page:",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef scrape_senjob():\n    logger.info(\"Démarrage du scraping Senjob\")\n    # Récupérer tous les liens et titres d'offres existants une seule fois au début\n    existing_links = set(SenjobModel.objects.values_list('lien_offre', flat=True))\n    existing_titles = set(SenjobModel.objects.values_list('titre', flat=True))\n    logger.info(f\"Nombre d'offres déjà en base: {len(existing_links)}\")\n    total_offres = 0\n    existing_offres_count = 0\n    consecutive_existing_offres = 0",
         "detail": "projet.scrap_emploi.controllers.senjobController",
         "documentation": {}
     },
@@ -785,24 +836,6 @@
         "description": "projet.scrap_emploi.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='EmploiDakar',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('titre', models.CharField(max_length=200)),",
         "detail": "projet.scrap_emploi.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
-        "description": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('scrap_emploi', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='emploidakar',\n            name='competences',\n        ),\n        migrations.RemoveField(",
-        "detail": "projet.scrap_emploi.migrations.0002_remove_emploidakar_competences_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "projet.scrap_emploi.migrations.0003_senjobmodel",
-        "description": "projet.scrap_emploi.migrations.0003_senjobmodel",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('scrap_emploi', '0002_remove_emploidakar_competences_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='SenjobModel',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('titre', models.CharField(max_length=255)),",
-        "detail": "projet.scrap_emploi.migrations.0003_senjobmodel",
         "documentation": {}
     },
     {
@@ -821,6 +854,15 @@
         "description": "projet.scrap_emploi.models.emploisenegalModel",
         "peekOfCode": "class EmploiSenegal(models.Model):\n    titre = models.CharField(max_length=200)\n    description_poste = models.TextField()\n    profil_recherche = models.TextField(default='')\n    entreprise = models.CharField(max_length=100)\n    localisation = models.CharField(max_length=100)\n    lien_offre = models.URLField()\n    source = models.CharField(max_length=100, default='emploisenegal.com')\n    date_publication = models.DateField()\n    date_creation = models.DateTimeField(auto_now_add=True)",
         "detail": "projet.scrap_emploi.models.emploisenegalModel",
+        "documentation": {}
+    },
+    {
+        "label": "OffreEmploiSN",
+        "kind": 6,
+        "importPath": "projet.scrap_emploi.models.offreEmploiSNModel",
+        "description": "projet.scrap_emploi.models.offreEmploiSNModel",
+        "peekOfCode": "class OffreEmploiSN(models.Model):\n    titre = models.CharField(max_length=255)\n    entreprise = models.CharField(max_length=255)\n    lieu = models.CharField(max_length=255, null=True, blank=True)\n    type_contrat = models.CharField(max_length=50, null=True, blank=True)\n    date_publication = models.DateTimeField()\n    lien_offre = models.URLField(unique=True)\n    lien_image = models.URLField(null=True, blank=True)\n    description_courte = models.TextField(null=True, blank=True)\n    description_complete = models.TextField(null=True, blank=True)",
+        "detail": "projet.scrap_emploi.models.offreEmploiSNModel",
         "documentation": {}
     },
     {
@@ -860,6 +902,24 @@
         "documentation": {}
     },
     {
+        "label": "scrape_senjob_periodic",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.tasks",
+        "description": "projet.scrap_emploi.tasks",
+        "peekOfCode": "def scrape_senjob_periodic():\n    \"\"\"\n    Tâche périodique pour scraper les offres de Senjob\n    \"\"\"\n    try:\n        logger.info(\"Démarrage du scraping périodique Senjob\")\n        new_offers = scrape_senjob()\n        logger.info(f\"Scraping Senjob terminé. {new_offers} nouvelles offres ajoutées.\")\n        return new_offers\n    except Exception as e:",
+        "detail": "projet.scrap_emploi.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_offre_emploi_sn_periodic",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.tasks",
+        "description": "projet.scrap_emploi.tasks",
+        "peekOfCode": "def scrape_offre_emploi_sn_periodic():\n    \"\"\"\n    Tâche périodique pour scraper les offres d'OffreEmploiSN\n    \"\"\"\n    try:\n        logger.info(\"Démarrage du scraping périodique OffreEmploiSN\")\n        new_offers = scrape_offre_emploi_sn()\n        logger.info(f\"Scraping OffreEmploiSN terminé. {new_offers} nouvelles offres ajoutées.\")\n        return new_offers\n    except Exception as e:",
+        "detail": "projet.scrap_emploi.tasks",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "kind": 5,
         "importPath": "projet.scrap_emploi.tasks",
@@ -873,7 +933,7 @@
         "kind": 2,
         "importPath": "projet.scrap_emploi.views",
         "description": "projet.scrap_emploi.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'scrap_emploi/home.html')\ndef emplois_senegal_list(request):\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }",
+        "peekOfCode": "def home(request):\n    return render(request, 'scrap_emploi/home.html')\ndef emplois_senegal_list(request):\n    scrape_emplois()\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj",
         "detail": "projet.scrap_emploi.views",
         "documentation": {}
     },
@@ -882,7 +942,7 @@
         "kind": 2,
         "importPath": "projet.scrap_emploi.views",
         "description": "projet.scrap_emploi.views",
-        "peekOfCode": "def emplois_senegal_list(request):\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }\n    return render(request, 'scrap_emploi/emplois_senegal_list.html', context)\ndef emploi_senegal_detail(request, emploi_id):",
+        "peekOfCode": "def emplois_senegal_list(request):\n    scrape_emplois()\n    emplois_senegal = EmploiSenegal.objects.all()\n    paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page\n    page_number = request.GET.get('page')\n    page_obj = paginator.get_page(page_number)\n    context = {\n        'page_obj': page_obj\n    }\n    return render(request, 'scrap_emploi/emplois_senegal_list.html', context)",
         "detail": "projet.scrap_emploi.views",
         "documentation": {}
     },
@@ -909,7 +969,7 @@
         "kind": 2,
         "importPath": "projet.scrap_emploi.views",
         "description": "projet.scrap_emploi.views",
-        "peekOfCode": "def emploi_dakar_detail(request, emploi_id):\n    emploi = get_object_or_404(EmploiDakar, id=emploi_id)\n    context = {\n        'emploi': emploi\n    }\n    return render(request, 'scrap_emploi/emploi_dakar_detail.html', context)\ndef senjob_list(request):\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')",
+        "peekOfCode": "def emploi_dakar_detail(request, emploi_id):\n    emploi = get_object_or_404(EmploiDakar, id=emploi_id)\n    context = {\n        'emploi': emploi\n    }\n    return render(request, 'scrap_emploi/emploi_dakar_detail.html', context)\ndef senjob_list(request):\n    scrape_senjob()\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page",
         "detail": "projet.scrap_emploi.views",
         "documentation": {}
     },
@@ -918,7 +978,7 @@
         "kind": 2,
         "importPath": "projet.scrap_emploi.views",
         "description": "projet.scrap_emploi.views",
-        "peekOfCode": "def senjob_list(request):\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')\n    offres = paginator.get_page(page)\n    return render(request, 'scrap_emploi/senjob_list.html', {'offres': offres})\ndef senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})",
+        "peekOfCode": "def senjob_list(request):\n    scrape_senjob()\n    offres_list = SenjobModel.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')\n    offres = paginator.get_page(page)\n    return render(request, 'scrap_emploi/senjob_list.html', {'offres': offres})\ndef senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})",
         "detail": "projet.scrap_emploi.views",
         "documentation": {}
     },
@@ -927,7 +987,25 @@
         "kind": 2,
         "importPath": "projet.scrap_emploi.views",
         "description": "projet.scrap_emploi.views",
-        "peekOfCode": "def senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})",
+        "peekOfCode": "def senjob_detail(request, offre_id):\n    offre = get_object_or_404(SenjobModel, id=offre_id)\n    return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})\ndef offre_emploi_sn_list(request):\n    scrape_offre_emploi_sn()\n    offres_list = OffreEmploiSN.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')\n    offres = paginator.get_page(page)\n    return render(request, 'scrap_emploi/offre_emploi_sn_list.html', {'offres': offres})",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "offre_emploi_sn_list",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def offre_emploi_sn_list(request):\n    scrape_offre_emploi_sn()\n    offres_list = OffreEmploiSN.objects.all().order_by('-date_publication')\n    paginator = Paginator(offres_list, 10)  # 10 offres par page\n    page = request.GET.get('page')\n    offres = paginator.get_page(page)\n    return render(request, 'scrap_emploi/offre_emploi_sn_list.html', {'offres': offres})\ndef offre_emploi_sn_detail(request, offre_id):\n    offre = get_object_or_404(OffreEmploiSN, id=offre_id)\n    return render(request, 'scrap_emploi/offre_emploi_sn_detail.html', {'offre': offre})",
+        "detail": "projet.scrap_emploi.views",
+        "documentation": {}
+    },
+    {
+        "label": "offre_emploi_sn_detail",
+        "kind": 2,
+        "importPath": "projet.scrap_emploi.views",
+        "description": "projet.scrap_emploi.views",
+        "peekOfCode": "def offre_emploi_sn_detail(request, offre_id):\n    offre = get_object_or_404(OffreEmploiSN, id=offre_id)\n    return render(request, 'scrap_emploi/offre_emploi_sn_detail.html', {'offre': offre})",
         "detail": "projet.scrap_emploi.views",
         "documentation": {}
     },

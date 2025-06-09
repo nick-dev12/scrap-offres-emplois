@@ -1,42 +1,65 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agrégateur d'offres d'emploi</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1>Bienvenue sur notre agrégateur d'offres d'emploi</h1>
-        
-        <div class="grid">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Senjob</h2>
-                    <p class="card-text">Consultez les dernières offres d'emploi de Senjob</p>
-                    <a href="{% url 'senjob_list' %}" class="btn btn-primary">Voir les offres</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Emploi Dakar</h2>
-                    <p class="card-text">Découvrez les opportunités sur Emploi Dakar</p>
-                    <a href="{% url 'emplois_dakar_list' %}" class="btn btn-primary">Voir les offres</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Emploi Sénégal</h2>
-                    <p class="card-text">Explorez les offres d'Emploi Sénégal</p>
-                    <a href="{% url 'emplois_senegal_list' %}" class="btn btn-primary">Voir les offres</a>
-                </div>
-            </div>
+      <h1>Bienvenue sur notre agrégateur d'offres d'emploi</h1>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Senjob</h2>
+            <p class="card-text">
+              Consultez les dernières offres d'emploi de Senjob
+            </p>
+            <a href="{% url 'senjob_list' %}" class="btn btn-primary"
+              >Voir les offres</a
+            >
+          </div>
         </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Emploi Dakar</h2>
+            <p class="card-text">Découvrez les opportunités sur Emploi Dakar</p>
+            <a href="{% url 'emplois_dakar_list' %}" class="btn btn-primary"
+              >Voir les offres</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Emploi Sénégal</h2>
+            <p class="card-text">Explorez les offres d'Emploi Sénégal</p>
+            <a href="{% url 'emplois_senegal_list' %}" class="btn btn-primary"
+              >Voir les offres</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Offre Emploi SN</h2>
+            <p class="card-text">
+              Découvrez les opportunités sur Offre Emploi SN
+            </p>
+            <a href="{% url 'offre_emploi_sn_list' %}" class="btn btn-primary"
+              >Voir les offres</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-</html> 
+  </body>
+</html>

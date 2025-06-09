@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ offre.titre }} - Détails de l'offre</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="{% url 'home' %}" class="back-link">
+          <i class="fas fa-home"></i> Accueil
+        </a>
+        <span class="separator">/</span>
+        <a href="{% url 'offre_emploi_sn_list' %}" class="back-link">
+          <i class="fas fa-list"></i> Liste des offres
+        </a>
+        <span class="separator">/</span>
+        <span class="current">Détails de l'offre</span>
+      </nav>
+
+      <article class="job-detail">
+        <header class="job-header">
+          {% if offre.lien_image %}
+          <div class="job-logo">
+            <img src="{{ offre.lien_image }}" alt="{{ offre.entreprise }}" />
+          </div>
+          {% endif %}
+
+          <h1 class="job-title">{{ offre.titre }}</h1>
+          <div class="job-meta">
+            <div class="meta-item">
+              <i class="fas fa-building"></i>
+              <span>{{ offre.entreprise }}</span>
+            </div>
+            {% if offre.lieu %}
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>{{ offre.lieu }}</span>
+            </div>
+            {% endif %} {% if offre.type_contrat %}
+            <div class="meta-item">
+              <i class="fas fa-file-contract"></i>
+              <span>{{ offre.type_contrat }}</span>
+            </div>
+            {% endif %}
+          </div>
+          <div class="job-dates">
+            <div class="date-item">
+              <i class="fas fa-calendar-plus"></i>
+              <span>Publié le {{ offre.date_publication|date:"d F Y" }}</span>
+            </div>
+            {% if offre.date_cloture %}
+            <div class="date-item">
+              <i class="fas fa-calendar-times"></i>
+              <span
+                >Date de clôture : {{ offre.date_cloture|date:"d F Y" }}</span
+              >
+            </div>
+            {% endif %}
+          </div>
+        </header>
+
+        <section class="job-content">
+          {% if offre.description_courte %}
+          <div class="job-summary">
+            <h2>Résumé</h2>
+            <p>{{ offre.description_courte }}</p>
+          </div>
+          {% endif %}
+
+          <h2>Description du poste</h2>
+          <div class="job-description">
+            {{ offre.description_complete|safe }}
+          </div>
+        </section>
+
+        <footer class="job-footer">
+          <a href="{{ offre.lien_offre }}" target="_blank" class="apply-button">
+            <i class="fas fa-external-link-alt"></i>
+            Voir l'offre sur Offre-Emploi.sn
+          </a>
+          <div class="share-buttons">
+            <span>Partager :</span>
+            <a
+              href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}"
+              target="_blank"
+              class="share-button linkedin"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ offre.titre }}"
+              target="_blank"
+              class="share-button twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/?text={{ offre.titre }}%20{{ request.build_absolute_uri }}"
+              target="_blank"
+              class="share-button whatsapp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </body>
+</html>

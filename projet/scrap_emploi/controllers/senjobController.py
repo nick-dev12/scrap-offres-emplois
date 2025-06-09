@@ -10,7 +10,18 @@ logger = logging.getLogger(__name__)
 
 def scrape_senjob():
     logger.info("Démarrage du scraping Senjob")
+    
+    # Récupérer tous les liens et titres d'offres existants une seule fois au début
+    existing_links = set(SenjobModel.objects.values_list('lien_offre', flat=True))
+    existing_titles = set(SenjobModel.objects.values_list('titre', flat=True))
+    
+    logger.info(f"Nombre d'offres déjà en base: {len(existing_links)}")
+    
     total_offres = 0
+    existing_offres_count = 0
+    consecutive_existing_offres = 0
+    max_consecutive_existing = 15  # Arrêter après 15 offres consécutives déjà existantes
+    
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
@@ -40,6 +51,8 @@ def scrape_senjob():
                 
             logger.info(f"Nombre d'offres trouvées sur la page {page_number} : {len(offres)}")
             
+            page_has_new_offres = False
+            
             # Traitement de chaque offre
             for offre in offres:
                 try:
@@ -56,10 +69,16 @@ def scrape_senjob():
                         lien_offre = 'https://senjob.com/sn/' + lien_offre.lstrip('/')
                     titre = lien_element.get_text(strip=True)
                     
-                    # Vérification si l'offre existe déjà
-                    if SenjobModel.objects.filter(lien_offre=lien_offre).exists():
+                    # Vérification si l'offre existe déjà (par lien ou titre)
+                    if lien_offre in existing_links or titre.lower() in [t.lower() for t in existing_titles]:
                         logger.info(f"L'offre {titre} existe déjà")
+                        existing_offres_count += 1
+                        consecutive_existing_offres += 1
                         continue
+                    else:
+                        # Réinitialiser le compteur d'offres consécutives existantes
+                        consecutive_existing_offres = 0
+                        page_has_new_offres = True
                         
                     # Extraction de la localisation
                     localisation = offre.select_one('td[style*="font-size:14px"] span.green_text_normal')
@@ -137,6 +156,11 @@ def scrape_senjob():
                             lien_offre=lien_offre
                         )
                         offre_obj.save()
+                        
+                        # Ajouter aux ensembles pour éviter les doublons dans la même session
+                        existing_links.add(lien_offre)
+                        existing_titles.add(titre)
+                        
                         total_offres += 1
                         logger.info(f"Offre sauvegardée avec succès : {titre}")
 
@@ -144,6 +168,15 @@ def scrape_senjob():
                     logger.error(f"Erreur lors du traitement de l'offre : {str(e)}")
                     logger.exception(e)
                     continue
+            
+            # Arrêter si on a trouvé trop d'offres consécutives déjà existantes
+            if consecutive_existing_offres >= max_consecutive_existing:
+                logger.info(f"Arrêt du scraping après {consecutive_existing_offres} offres consécutives déjà existantes")
+                break
+                
+            # Si la page ne contient que des offres déjà existantes, on continue quand même à la page suivante
+            if not page_has_new_offres and existing_offres_count > 0:
+                logger.info("Page ne contenant que des offres déjà existantes, passage à la page suivante")
             
             # Analyse de la structure de pagination
             logger.info("Analyse de la structure de pagination...")
@@ -189,5 +222,5 @@ def scrape_senjob():
             logger.exception(e)
             break
     
-    logger.info(f"Scraping terminé. Total des offres traitées : {total_offres}")
+    logger.info(f"Scraping terminé. Total des nouvelles offres ajoutées : {total_offres}. Offres déjà existantes ignorées : {existing_offres_count}")
     return total_offres

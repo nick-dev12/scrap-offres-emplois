@@ -49,7 +49,7 @@ def scrape_emplois():
             
             if not offres:
                 logger.info(f"Fin du scraping à la page {page}. Aucune offre trouvée.")
-                break
+                break  
             
             page_has_new_offers = False
             
@@ -70,9 +70,10 @@ def scrape_emplois():
                         # Réinitialiser le compteur d'offres consécutives existantes
                         consecutive_existing_offers = 0
                         page_has_new_offers = True
+                        
                     
                     logger.info(f"Traitement de la nouvelle offre: {titre}")
-                    
+        
                     # Extraction de l'entreprise
                     entreprise_element = offre.find('a', class_='card-job-company company-name')
                     entreprise = entreprise_element.get_text(strip=True) if entreprise_element else "Non spécifié"
@@ -121,28 +122,28 @@ def scrape_emplois():
                         # Récupérer le contenu HTML de la page de détails
                         details_response = requests.get(lien_offre, headers=headers, timeout=30)
                         details_soup = BeautifulSoup(details_response.content, 'html.parser')
-                        
+        
                         # Extraire la description du poste
                         description_poste_element = details_soup.find('div', class_='job-description')
                         description_poste = str(description_poste_element) if description_poste_element else ""
-                        
+        
                         # Extraire les détails du profil recherché
                         profil_recherche_element = details_soup.find('div', class_='job-qualifications')
                         profil_recherche = str(profil_recherche_element) if profil_recherche_element else ""
-                        
+        
                         skills_elements = details_soup.select('.skills li')
                         competences = ', '.join([li.get_text(strip=True) for li in skills_elements]) if skills_elements else ""
-                        
+        
                         entreprise_element = details_soup.find('div', class_='card-block-company')
                         if entreprise_element:
                             secteur_activite_element = entreprise_element.find('div', class_='field-item even')
                             secteur_activite = secteur_activite_element.get_text(strip=True) if secteur_activite_element else ""
                         else:
                             secteur_activite = ""
-                        
+        
                         site_internet_element = entreprise_element.find('a', rel='nofollow') if entreprise_element else None
                         site_internet = site_internet_element['href'] if site_internet_element else ""
-                        
+        
                         description_entreprise_element = entreprise_element.find('p', class_='truncated-text') if entreprise_element else None
                         description_entreprise = description_entreprise_element.get_text(strip=True) if description_entreprise_element else ""
                     except Exception as e:

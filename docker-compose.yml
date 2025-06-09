@@ -1,0 +1,71 @@
+version: "3.8"
+
+services:
+  web:
+    image: scraping
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=django_db
+      - MYSQL_USER=django
+      - MYSQL_PASSWORD=django_password
+      - MYSQL_ROOT_PASSWORD=root_password
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  celery:
+    image: scraping
+    command: celery -A scraping worker -l info
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DATABASE_URL=mysql://django:django_password@db/django_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    restart: unless-stopped
+
+  celery-beat:
+    image: scraping
+    command: celery -A scraping beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    environment:
+      - DATABASE_URL=mysql://django:django_password@db/django_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=root_password
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  mysql_data:

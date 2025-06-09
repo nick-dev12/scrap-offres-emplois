@@ -24,4 +24,12 @@ app.conf.beat_schedule = {
         'task': 'scrap_emploi.tasks.scrape_emploisenegal_periodic',
         'schedule': 30 * 60,  # 30 minutes in seconds
     },
+    'scrape-senjob-every-30-minutes': {
+        'task': 'scrap_emploi.tasks.scrape_senjob_periodic',
+        'schedule': 30 * 60,  # 30 minutes in seconds
+    },
+    'scrape-offre-emploi-sn-every-30-minutes': {
+        'task': 'scrap_emploi.tasks.scrape_offre_emploi_sn_periodic',
+        'schedule': 30 * 60,  # 30 minutes in seconds
+    },
 } 

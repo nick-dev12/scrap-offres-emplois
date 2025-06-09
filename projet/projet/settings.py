@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'projet.wsgi.application'
 DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.mysql',
-           'NAME': 'work_flexer',
-           'USER': 'root',
-           'PASSWORD': '',
-           'HOST': 'localhost',  # ou l'adresse IP de votre serveur MySQL
+           'NAME': 'oyono_work_flexer',
+           'USER': 'oyono_jomas',
+           'PASSWORD': 'Ludvanne12@',
+           'HOST': '147.78.130.141',  # ou l'adresse IP de votre serveur MySQL
            'PORT': '3306',       # port par défaut de MySQL
        }
    }

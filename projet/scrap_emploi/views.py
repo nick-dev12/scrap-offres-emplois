@@ -5,7 +5,10 @@ from .models.emploisenegalModel import EmploiSenegal
 from .models.emploidakarModel import EmploiDakar
 from .controllers.emploidakarController import scrape_emplois_dakar
 from .controllers.emploisenegalController import scrape_emplois
+from .controllers.senjobController import scrape_senjob
 from .models.senjobModel import SenjobModel
+from .controllers.offreEmploiSNController import scrape_offre_emploi_sn
+from .models.offreEmploiSNModel import OffreEmploiSN
 
 
 def home(request):
@@ -13,6 +16,7 @@ def home(request):
 
 
 def emplois_senegal_list(request):
+    scrape_emplois()
     
     emplois_senegal = EmploiSenegal.objects.all()
     paginator = Paginator(emplois_senegal, 20)  # 20 éléments par page
@@ -54,6 +58,7 @@ def emploi_dakar_detail(request, emploi_id):
 
 
 def senjob_list(request):
+    scrape_senjob()
     offres_list = SenjobModel.objects.all().order_by('-date_publication')
     paginator = Paginator(offres_list, 10)  # 10 offres par page
     
@@ -66,6 +71,22 @@ def senjob_list(request):
 def senjob_detail(request, offre_id):
     offre = get_object_or_404(SenjobModel, id=offre_id)
     return render(request, 'scrap_emploi/senjob_detail.html', {'offre': offre})
+
+
+def offre_emploi_sn_list(request):
+    scrape_offre_emploi_sn()
+    offres_list = OffreEmploiSN.objects.all().order_by('-date_publication')
+    paginator = Paginator(offres_list, 10)  # 10 offres par page
+    
+    page = request.GET.get('page')
+    offres = paginator.get_page(page)
+    
+    return render(request, 'scrap_emploi/offre_emploi_sn_list.html', {'offres': offres})
+
+
+def offre_emploi_sn_detail(request, offre_id):
+    offre = get_object_or_404(OffreEmploiSN, id=offre_id)
+    return render(request, 'scrap_emploi/offre_emploi_sn_detail.html', {'offre': offre})
 
 
 

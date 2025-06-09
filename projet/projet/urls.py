@@ -30,4 +30,7 @@ urlpatterns = [
     
     path('senjob/', views.senjob_list, name='senjob_list'),
     path('senjob/<int:offre_id>/', views.senjob_detail, name='senjob_detail'),
+    
+    path('offre-emploi-sn/', views.offre_emploi_sn_list, name='offre_emploi_sn_list'),
+    path('offre-emploi-sn/<int:offre_id>/', views.offre_emploi_sn_detail, name='offre_emploi_sn_detail'),
 ]

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offres d'emploi OffreEmploi.sn</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Offres d'emploi sur OffreEmploi.sn</h1>
+      <ul class="job-list">
+        {% for emploi in offres %}
+        <li class="job-item">
+          <h2 class="job-title">
+            <a href="{% url 'offre_emploi_sn_detail' emploi.id %}"
+              >{{ emploi.titre }}</a
+            >
+          </h2>
+          <p class="job-company">{{ emploi.entreprise }}</p>
+          <p class="job-location">{{ emploi.lieu }}</p>
+          <p class="job-date">
+            Publié le {{ emploi.date_publication|date:"d/m/Y" }}
+          </p>
+        </li>
+        {% empty %}
+        <li>Aucune offre d'emploi trouvée.</li>
+        {% endfor %}
+      </ul>
+
+      <div class="pagination">
+        <span class="step-links">
+          {% if offres.has_previous %}
+          <a href="?page=1">&laquo; Première</a>
+          <a href="?page={{ offres.previous_page_number }}">Précédente</a>
+          {% endif %}
+
+          <span class="current-page">
+            Page {{ offres.number }} sur {{ offres.paginator.num_pages }}.
+          </span>
+
+          {% if offres.has_next %}
+          <a href="?page={{ offres.next_page_number }}">Suivante</a>
+          <a href="?page={{ offres.paginator.num_pages }}">Dernière &raquo;</a>
+          {% endif %}
+        </span>
+      </div>
+
+      <a href="{% url 'home' %}" class="back-link">Retour à l'accueil</a>
+    </div>
+  </body>
+</html>
